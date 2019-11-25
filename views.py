@@ -2,15 +2,26 @@ import requests
 from django.http import HttpResponse
 from django.shortcuts import render
 
-def index(request):
-    # This is similar to ones we have done before. Instead of keeping
-    # the HTML / template in a separate directory, we just reply with
-    # the HTML embedded here.
-    return HttpResponse('''
-        <h1>Welcome to my home page!</h1>
-        <a href="/about-me">About me</a> <br />
-        <a href="/github-api-example">See my GitHub contributions</a> <br />
-    ''')
+def about(request):
+    about_html = open("content/about.html").read()
+    context = {
+    "content": about_html,
+    }
+    return render(request, "base.html", context)
+
+def blog(request):
+    blog_html = open("content/blog.html").read()
+    context = {
+    "content": blog_html,
+    }
+    return render(request, "base.html", context)
+
+def portfolio(request):
+    portfolio_html = open("portfolio/about.html").read()
+    context = {
+    "content": portfolio_html,
+    }
+    return render(request, "base.html", context)
 
 
 def about_me(request):
