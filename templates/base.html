@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <title>
-      {{ title|title }}
+      {% block title %}{% endblock %}
     </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500|Open+Sans:300&display=swap" rel="stylesheet">
@@ -36,12 +36,15 @@
     </form> /-->
   </div>
  </nav>
- {{ content|safe }}
+ <div class="content"></div>
+  {% block content %}
+  {% endblock content %}
+</div>
 </div>
 <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+      <p class="m-0 text-center text-white">Copyright &copy; DSMCoding 2020</p>
     </div>
     <!-- /.container -->
   </footer>

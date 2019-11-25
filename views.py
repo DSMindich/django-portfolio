@@ -3,25 +3,16 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def about(request):
-    about_html = open("content/about.html").read()
-    context = {
-    "content": about_html,
-    }
-    return render(request, "base.html", context)
+    context = {}
+    return render(request, "about.html", context)
 
 def blog(request):
-    blog_html = open("content/blog.html").read()
-    context = {
-    "content": blog_html,
-    }
-    return render(request, "base.html", context)
+    context = {}
+    return render(request, "blog.html", context)
 
 def portfolio(request):
-    portfolio_html = open("content/portfolio.html").read()
-    context = {
-    "content": portfolio_html,
-    }
-    return render(request, "base.html", context)
+    context = {}
+    return render(request, "portfolio.html", context)
 
 def github_api_example(request):
     # We can also combine Django with APIs
