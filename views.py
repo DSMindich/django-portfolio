@@ -17,23 +17,11 @@ def blog(request):
     return render(request, "base.html", context)
 
 def portfolio(request):
-    portfolio_html = open("portfolio/about.html").read()
+    portfolio_html = open("content/portfolio.html").read()
     context = {
     "content": portfolio_html,
     }
     return render(request, "base.html", context)
-
-
-def about_me(request):
-    # Django comes with a "shortcut" function called "render", that
-    # lets us read in HTML template files in separate directories to
-    # keep our code better organized.
-    context = {
-        'name': 'Ash Ketchum',
-        'pokemon': 'Pikachu',
-    }
-    return render(request, 'about_me.html', context)
-
 
 def github_api_example(request):
     # We can also combine Django with APIs
