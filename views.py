@@ -11,15 +11,12 @@ def blog(request):
     return render(request, "blog.html", context)
 
 def portfolio(request):
-    context = {}
-    return render(request, "portfolio.html", context)
-
-def github_api_example(request):
-    # We can also combine Django with APIs
-    response = requests.get('https://api.github.com/users/michaelpb/repos')
+    response = requests.get('https://api.github.com/users/DSMindich/repos')
     repos = response.json()
     context = {
         'github_repos': repos,
     }
-    return render(request, 'github.html', context)
+    return render(request, "portfolio.html", context)
+
+
 

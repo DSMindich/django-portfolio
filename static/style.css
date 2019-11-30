@@ -15,6 +15,27 @@
 }
 .whole-screen { height: 100vh;}
 
+.center {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.black-box {
+	background-color: #292929;
+	color: whitesmoke;
+	height: 500px;
+	width: 500px;
+}
+.header {
+	font-family: "Montserrat", sans-serif;
+	font-size: 48px;
+}
+.header-lrg {
+	font-family: "Montserrat", sans-serif;
+	font-size: 64px;}
+.nav-white {
+	background-color: white
+}
 a:link {
 	color: #00AEFF;
 	background-color: transparent;
@@ -38,24 +59,3 @@ a:link {
 	background-color: transparent;
 	text-decoration: underline;
   }
-  .center {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.black-box {
-	background-color: #292929;
-	color: whitesmoke;
-	height: 500px;
-	width: 500px;
-}
-.header {
-	font-family: "Montserrat", sans-serif;
-	font-size: 48px;
-}
-.header-lrg {
-	font-family: "Montserrat", sans-serif;
-	font-size: 64px;}
-.nav-white {
-	background-color: white
-}
